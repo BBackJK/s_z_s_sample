@@ -2,7 +2,6 @@ package com.example.szs.infrastructure.config;
 
 import kong.unirest.Config;
 import kong.unirest.JsonObjectMapper;
-import kong.unirest.Unirest;
 import kong.unirest.UnirestInstance;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

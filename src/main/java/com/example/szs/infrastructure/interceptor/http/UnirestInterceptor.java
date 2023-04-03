@@ -1,8 +1,8 @@
 package com.example.szs.infrastructure.interceptor.http;
 
 import com.example.szs.common.utils.CommonUtils;
-import com.example.szs.core.scrap.application.port.in.AddScrapLogUseCase;
-import com.example.szs.core.scrap.application.port.in.ScrapLogRegisterCommand;
+import com.example.szs.core.log.application.port.in.AddApiLogUseCase;
+import com.example.szs.core.log.application.port.in.ApiLogAddCommand;
 import kong.unirest.*;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 @RequiredArgsConstructor
 public class UnirestInterceptor implements Interceptor {
 
-    private final AddScrapLogUseCase addScrapLogUseCase;
+    private final AddApiLogUseCase addApiLogUseCase;
     private final String KONG_REQ_BODY_BREAK_VALUE = "===================================";
     private LocalDateTime requestAt = null;
 
@@ -33,8 +33,9 @@ public class UnirestInterceptor implements Interceptor {
             log.info("parsing Error !!");
             log.info(e.getCause().getMessage());
         });
-        addScrapLogUseCase.save(
-                ScrapLogRegisterCommand.builder()
+
+        addApiLogUseCase.save(
+                ApiLogAddCommand.builder()
                         .url(request.getUrl())
                         .httpMethod(request.getHttpMethod().toString())
                         .requestInfo(requestBodyInfo)

@@ -40,4 +40,14 @@ public class LocalDateUtils {
             return null;
         }
     }
+
+    public String toString(LocalDate value) {
+        return toString(value, DateTimeFormatter.ISO_DATE);
+    }
+
+    public String toString(LocalDate value, DateTimeFormatter format) {
+        return value == null
+                ? ""
+                : value.format(format);
+    }
 }

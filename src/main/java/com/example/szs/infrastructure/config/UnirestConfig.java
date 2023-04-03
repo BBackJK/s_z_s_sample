@@ -1,6 +1,6 @@
 package com.example.szs.infrastructure.config;
 
-import com.example.szs.core.scrap.application.port.in.AddScrapLogUseCase;
+import com.example.szs.core.log.application.port.in.AddApiLogUseCase;
 import com.example.szs.infrastructure.interceptor.http.UnirestInterceptor;
 import kong.unirest.Config;
 import kong.unirest.Unirest;
@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @RequiredArgsConstructor
 public class UnirestConfig {
-    private final AddScrapLogUseCase addScrapLogUseCase;
+    private final AddApiLogUseCase addScrapLogUseCase;
 
     @Bean
     public UnirestInterceptor getUnirestInterceptor() {
