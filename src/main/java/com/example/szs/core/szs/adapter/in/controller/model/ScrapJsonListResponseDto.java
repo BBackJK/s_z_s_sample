@@ -1,10 +1,9 @@
 package com.example.szs.core.szs.adapter.in.controller.model;
 
 import com.example.szs.common.factory.ScrapIncomeResponseFactory;
-import com.example.szs.common.format.NumberCommaFormat;
+import com.example.szs.infrastructure.web.formatter.NumberCommaFormat;
 import com.example.szs.common.utils.CommonUtils;
 import com.example.szs.core.szs.domain.scrap.ScrapUserInfo;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.*;

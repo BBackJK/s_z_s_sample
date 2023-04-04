@@ -1,6 +1,6 @@
 package com.example.szs.core.szs.adapter.in.controller.model;
 
-import com.example.szs.common.format.NumberCommaFormat;
+import com.example.szs.infrastructure.web.formatter.NumberCommaFormat;
 import com.example.szs.common.utils.CommonUtils;
 import com.example.szs.common.utils.LocalDateUtils;
 import com.example.szs.core.szs.domain.scrap.ScrapSalary;

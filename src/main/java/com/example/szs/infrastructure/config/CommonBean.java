@@ -1,5 +1,6 @@
 package com.example.szs.infrastructure.config;
 
+import com.example.szs.infrastructure.properties.EndPointProperty;
 import kong.unirest.Config;
 import kong.unirest.JsonObjectMapper;
 import kong.unirest.UnirestInstance;

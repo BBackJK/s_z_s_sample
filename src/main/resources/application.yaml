@@ -20,3 +20,9 @@ spring:
 
 end-point:
   szs-code-test: https://codetest.3o3.co.kr
+
+jwt:
+  secret-key: bbackjk
+  expired-minutes: 30
+
+encrypt-key: bbackjkencryptkeyyy

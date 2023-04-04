@@ -9,7 +9,7 @@ import javax.persistence.Id;
 @Entity(name = "user_white_list")
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserWhiteListJpaEntity {
+class UserWhiteListJpaEntity {
     @Id
     private String regNo;
     private String name;

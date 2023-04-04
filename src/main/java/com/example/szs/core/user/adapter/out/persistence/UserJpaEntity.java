@@ -1,10 +1,13 @@
 package com.example.szs.core.user.adapter.out.persistence;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.time.LocalDateTime;
@@ -12,7 +15,9 @@ import java.time.LocalDateTime;
 @Entity(name = "users")
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserJpaEntity {
+@Getter
+@Setter
+class UserJpaEntity {
     @Id
     private String userId;
     private String password;
@@ -27,6 +32,8 @@ public class UserJpaEntity {
 
     private LocalDateTime deletedAt;
     private String deletedId;
-    private String isDeleted;
+
+    @Column(columnDefinition = "boolean default true")
+    private boolean isDeleted;
 
 }

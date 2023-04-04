@@ -1,4 +1,4 @@
-package com.example.szs.common.format;
+package com.example.szs.infrastructure.web.formatter;
 
 import com.example.szs.common.utils.NumberUtils;
 import com.fasterxml.jackson.core.JsonGenerator;
